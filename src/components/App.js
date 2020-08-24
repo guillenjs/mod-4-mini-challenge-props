@@ -2,8 +2,9 @@ import React from 'react';
 import Header from './Header';
 import SpiceList from './SpiceList';
 
+
 // spice info taken from spicejungle.com
-const spices = [
+export const spices = [
   {
     "id": 1,
     "title": "Allspice Berries, Whole (Jamaican)",
@@ -69,16 +70,22 @@ const spices = [
   },
 ]
 
+
+
 // function component
 function App() {
-  console.log("Spices:", spices)
+  console.log("Spices:", spices.length)
+
 
   // TODO: pass down props to the components below using the array of spices
   // What props do each of these components expect?
+
+
+  
   return (
     <>
-      <Header />
-      <SpiceList />
+     <Header spiceCount = {spices.length} />
+      <SpiceList spices = {spices}/>
     </>
   );
 }

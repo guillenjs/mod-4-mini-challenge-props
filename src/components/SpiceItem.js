@@ -4,12 +4,13 @@ class SpiceItem extends React.Component {
 
   render() {
     return (
+      // console.log(props.spice)
       <div className="spice-item">
-        <img src={null /* replace me with an image url */} alt={"replace me with a TITLE"} />
+        <img src={this.props.spice.image} alt={"replace me with a TITLE"} />
         <div className="details">
-          <h2>{"replace me with a TITLE"}</h2>
-          <p>{"replace me with a DESCRIPTION"}</p>
-          <em>{"replace me with NOTES"}</em>
+          <h2>{this.props.spice.title}</h2>
+          <p>{this.props.spice.description}</p>
+          <em>{this.props.spice.notes}</em>
         </div>
       </div>
     )
